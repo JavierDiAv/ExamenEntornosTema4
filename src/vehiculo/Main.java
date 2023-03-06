@@ -1,20 +1,21 @@
-
 package vehiculo;
 
 /**
  *
- * @author 
+ * @author Javier Diaz Aviles
+ * @version 1.0
+ * @since 06/03/2023
  */
 public class Main {
-    
       public static void main(String[] args) {
         operativaVehiculosJDA2223(50);
     }
-
-    private static void operativaVehiculosJDA2223(int enteroParaElExamen) {
+      /**
+       * @param enteroParaElExamen Entero creado con refactor para el examen
+       */
+    public static void operativaVehiculosJDA2223(int enteroParaElExamen) {
         VehiculoJDA2223 miVehiculoJDA2223;
         int stockActual;
-        
         miVehiculoJDA2223 = new VehiculoJDA2223("Seat",18000,100);
         try 
         {

@@ -1,63 +1,64 @@
-
 package vehiculo;
 
 /**
  *
- * @author 
+ * @author Javier Diaz Aviles
+ * @version 1.0
+ * @since 06/03/2023
  */
 public class VehiculoJDA2223 {
 
     /**
-     * @return the nombre
+     * @return El nombre
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param nombre El nombre al set
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the precio
+     * @return El precio
      */
     public double getPrecio() {
         return precio;
     }
 
     /**
-     * @param precio the precio to set
+     * @param precio El precio al set
      */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
     /**
-     * @return the precioIVA
+     * @return El precio con IVA
      */
     public double getPrecioIVA() {
         return precioIVA;
     }
 
     /**
-     * @param precioIVA the precioIVA to set
+     * @param precioIVA El precioIVA al set
      */
     public void setPrecioIVA(double precioIVA) {
         this.precioIVA = precioIVA;
     }
 
     /**
-     * @return the stock
+     * @return El stock
      */
     public int getStock() {
         return stock;
     }
 
     /**
-     * @param stock the stock to set
+     * @param stock El stock al set
      */
     public void setStock(int stock) {
         this.stock = stock;
@@ -68,12 +69,19 @@ public class VehiculoJDA2223 {
     private double precioIVA;
     private int stock;
 
-    /* Constructor sin argumentos */
+    /**
+     * Constructor sin argumentos 
+     */
     public VehiculoJDA2223 ()
     {
     }
-    // Constructor con parámetro para iniciar todas las propiedades de la clase
-    
+   
+    /**
+     * Constructor con parámetro para iniciar todas las propiedades de la clase
+     * @param nom String del nombre
+     * @param precio Precio en tipo double
+     * @param stock  Stock en tipo entero
+     */
     
     public VehiculoJDA2223 (String nom, double precio, int stock)
     {
@@ -81,24 +89,39 @@ public class VehiculoJDA2223 {
         this.precio=precio;
         this.stock=stock;
     }
-   // Método para asignar el nombre del vehiculo
+  /**
+   * Método para asignar el nombre del vehiculo.
+   * @param nom String el nombre.
+   */
     public void asignarNombre(String nom)
     {
         setNombre(nom);
     }
-    // Método que me devuelve el nombre del vehiculo
+    /**
+     * Método que me devuelve el nombre del vehiculo
+     * @return El nombre
+     */
+     
     public String obtenerNombre()
     {
         return getNombre();
     }
 
-    // Método que me devuelve el stock de vehiculos disponible en cada momento
+    /**
+     * Método que me devuelve el stock de vehiculos disponible en cada momento
+     * @return El stock
+     */
+    
      public int obtenerStock ()
     {
         return getStock();
     }
 
-    /* Método para comprar vehiculos. Modifica el stock.
+    /**
+     * 
+     * @param cantidad Entero de la cantidad.
+     * @throws Exception Envia un mensaje de alerta.
+     * Método para comprar vehiculos. Modifica el stock.
      * Este método va a ser probado con Junit
      */
     public void comprar(int cantidad) throws Exception
@@ -107,7 +130,11 @@ public class VehiculoJDA2223 {
             throw new Exception("No se puede comprar un nº negativo de vehiculos");
         setStock(getStock() + cantidad);
     }
-
+    /**
+     * 
+     * @param cantidad Entero de la cantidad.
+     * @throws Exception Envia un mensaje de alerta.
+     */
     public void vender (int cantidad) throws Exception
     {
         if (cantidad <= 0)
